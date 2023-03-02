@@ -1,3 +1,5 @@
+
+
 .Heading{
     font-weight: bold;
     font-size: larger;
@@ -17,3 +19,21 @@
 .question{
     font-size: medium;
 }
+
+.cardStyles{
+    height: 70vh;
+    margin: 24px;
+  }
+
+.topNav{
+    color: white;
+    background-color: #108ee9;
+    height: 60px;
+    font-weight: bold;
+    font-size: 36px;
+    text-align: center;
+    font-family:'Franklin Gothic Medium';
+    line-height: 60px
+  };
+
+
