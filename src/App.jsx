@@ -55,31 +55,32 @@ function App() {
   };
 
   return (
-    <div style={{ padding: "36px 224px" }}>
+    <div style={{ padding: "44px" }}>
       {submit ? (
         <Card>
           <SubmitPage correctAns={correctAnswer} score={score} />
         </Card>
       ) : (
         <>
-          <Row>
+          <Row justify="space-between">
+            <Col span={2}></Col>
             <Col span={6}>
-              <Card style={{ height: "60vh", margin: "24px" }}>
+              <Card style={{ height: "70vh", margin: "24px" }}>
                 <div style={{ textAlign: "center" }}>
                   <img src={reviewLogo} alt="logo" height="60" />
                 </div>
                 <div className="Heading">Review Answer Here</div>
-                <div style={{ padding: "24px 64px" }}>
+                <div style={{ padding: "24px", textAlign:'center' }}>
                   {answers.map((e, i) => (
-                    <div>
+                    <div style={{paddingBottom:'18px', fontWeight:'bold'}}>
                       {i + 1}. {e}{" "}
                     </div>
                   ))}
                 </div>
               </Card>
             </Col>
-            <Col span={18}>
-              <Card style={{ height: "60vh", width: "100%", margin: "24px" }}>
+            <Col span={14}>
+              <Card style={{ height: "70vh", width: "100%", margin: "24px" }}>
                 <div style={{ textAlign: "center" }}>
                   <img src={questionLogo} alt="logo" height="60" />
                 </div>
@@ -122,7 +123,7 @@ function App() {
                   </div>
                 </div>
                 {answers.length == 3 && (
-                  <div style={{ marginTop: "48px", textAlign: "center" }}>
+                  <div style={{ marginTop: "24px", textAlign: "center" }}>
                     <Button type="primary" onClick={handleSubmit}>
                       Submit
                     </Button>
@@ -130,6 +131,7 @@ function App() {
                 )}
               </Card>
             </Col>
+            <Col span={2}></Col>
           </Row>
         </>
       )}
